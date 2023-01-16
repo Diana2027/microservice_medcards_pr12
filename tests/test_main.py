@@ -27,7 +27,7 @@ class TestMedcards():
         assert response.json().get('fio') == 'FIO'
         assert response.json().get('id') == 0
 
-    def test_get_not_empty_cards():
+    def test_get_not_empty_cards(self):
         response = requests.get(f'{api_url}/v1/cards')
         assert response.status_code == 200
         assert len(response.json()) == 1
